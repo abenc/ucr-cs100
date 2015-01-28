@@ -1,1 +1,9 @@
-/ 100
+65 / 100
+
+-5: No test with greater than 10 parameters
+-5: No test running an executable in the current directory
+-10: No test of commands connected with && and ||
+-10: No test with mixed && and || connectors
+-5: No test of comment on a line by itself
+-5: Copyright attributed to Mike Izbicki
+-5: README not well formatted and lacking detail
