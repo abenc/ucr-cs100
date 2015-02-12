@@ -1,4 +1,30 @@
- 20   / 100  
+20 / 100
+
+-5x6: no error checking for syscalls (-5 for each missed syscall, see checksyscalls output)
+
+-25: -R flag doesn't work
+-25: file/folder parameter doesn't work 
+
+checksyscalls output:
+file: [src/ls.cpp]
+  lines with syscalls:
+  
+  026: [1;31m[K stat(file,&s)[m[K
+  033:  [1;31m[K getpwuid(s.st_uid)[m[K
+  034:  [1;31m[K getgrgid(s.st_gid)[m[K
+  076:  [1;31m[K opendir(const char* path, vector<string> flags)[m[K
+  094:  [1;31m[K opendir (path)[m[K
+  097:  [1;32m[Kperror (); exit (3)[m[K;
+  100:  [1;31m[K readdir (pdir)[m[K
+  104:  [1;32m[Kperror ()[m[K;
+  111: [1;31m[K closedir (pdir)[m[K
+  123: [1;31m[K opendir(,flags)[m[K
+
+summary:
+  number of syscalls... 8
+  number of perror..... 2
+  grade modifier....... -30
+
 
 
 
